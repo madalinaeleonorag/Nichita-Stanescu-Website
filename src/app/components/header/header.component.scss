@@ -1,0 +1,28 @@
+.app-header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  background-color: var(--primary-light);
+  padding: 1vw 2vw;
+
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+
+  .items {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    &-item {
+      padding-left: 2vw;
+      text-transform: capitalize;
+
+      &:hover {
+        color: var(--primary);
+        cursor: pointer;
+      }
+    }
+  }
+}
