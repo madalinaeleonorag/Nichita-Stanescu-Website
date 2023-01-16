@@ -3,15 +3,44 @@
     src="./../../../assets/logo.png"
     alt="logo liceul teoretic nichita stanescu"
     class="logo"
+    (click)="goTo('')"
   />
   <div class="items">
-    <div class="items-item" id="personal">personal</div>
-    <div class="items-item" id="elevi">elevi</div>
-    <div class="items-item" id="avizier">avizier</div>
-    <div class="items-item" id="contact">contact</div>
-    <div class="items-item" id="galerie">galerie</div>
-    <div class="items-item" id="transparenta-institutionala">
-      transparenta-institutionala
+    <div class="items-item" id="employees" (click)="goTo('employees')">
+      {{ "menu.employees" | translate: language }}
+    </div>
+    <div class="items-item" id="students" (click)="goTo('students')">
+      {{ "menu.students" | translate: language }}
+    </div>
+    <div class="items-item" id="notice-board" (click)="goTo('notice-board')">
+      {{ "menu.notice" | translate: language }}
+    </div>
+    <div class="items-item" id="gallery" (click)="goTo('gallery')">
+      {{ "menu.gallery" | translate: language }}
+    </div>
+    <div class="items-item" id="contact" (click)="goTo('contact')">
+      {{ "menu.contact" | translate: language }}
+    </div>
+    <div
+      class="items-item"
+      id="transparency"
+      (click)="goTo('external-transparency')"
+    >
+      {{ "menu.transparency" | translate: language }}
+    </div>
+    <div class="items-item languages">
+      <img
+        src="./../../../assets/icons/flag-translation-english.jpg"
+        alt="english flag translation"
+        (click)="selectLanguage('EN')"
+        [ngClass]="{ isSelected: language === 'EN' }"
+      />
+      <img
+        src="./../../../assets/icons/flag-translation-romanian.png"
+        alt="romanian flag translation"
+        (click)="selectLanguage('RO')"
+        [ngClass]="{ isSelected: language === 'RO' }"
+      />
     </div>
   </div>
 </div>

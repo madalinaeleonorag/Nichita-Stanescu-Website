@@ -7,9 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+import { EmployeesComponent } from './pages/employees/employees.component';
+import { StudentsComponent } from './pages/students/students.component';
+import { BoardComponent } from './pages/board/board.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { TranslatePipe } from './pipes/translate.pipe';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, HomepageComponent, EmployeesComponent, StudentsComponent, BoardComponent, GalleryComponent, ContactComponent, TranslatePipe],
   imports: [
     BrowserModule,
     AppRoutingModule,

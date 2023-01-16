@@ -1,0 +1,10 @@
+{
+  "menu": {
+    "employees": "employees",
+    "students": "students",
+    "notice": "Notice board",
+    "gallery": "gallery",
+    "contact": "contact",
+    "transparency": "institutional transparency"
+  }
+}

@@ -23,6 +23,26 @@
         color: var(--primary);
         cursor: pointer;
       }
+
+      &.languages {
+        display: flex;
+        padding-left: 0;
+
+        img {
+          height: 15px;
+          width: auto;
+          margin-left: 1vw;
+          filter: grayscale(1);
+
+          &:hover {
+            filter: none;
+          }
+
+          &.isSelected {
+            filter: none;
+          }
+        }
+      }
     }
   }
 }

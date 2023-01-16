@@ -1,0 +1,10 @@
+{
+  "menu": {
+    "employees": "angajati",
+    "students": "elevi",
+    "notice": "avizier",
+    "gallery": "galerie",
+    "contact": "contact",
+    "transparency": "transparenta institutionala"
+  }
+}
