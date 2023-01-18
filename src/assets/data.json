@@ -1,0 +1,63 @@
+{
+  "address": "Str. Lucretiu Patrascanu nr. 12, Sector 3 Bucuresti",
+  "phone": "021.340.04.40",
+  "internalPhone": "021.340.00.21",
+  "dentist": "0748354433",
+  "email": "liceul.nichita.stanescu@s3.ismb.ro",
+  "website": "http://www.liceulnichitastanescu.ro",
+  "transportation": "Troleibuz - 70, 79. Autobuz - 102, 253 - statia Liceul Nichita Stanescu. Metrou - statia Costin Georgian",
+  "personalLinks": [
+    {
+      "title": "Cadre didactice an școlar 2022-2023",
+      "link": "http://www.liceulnichitastanescu.ro/documente/documente%20manageriale/date%20profesori%20pt%20site%202022-2023.pdf"
+    },
+    {
+      "title": "Cadre didactice an scolar 2019-2020",
+      "link": "http://www.liceulnichitastanescu.ro/documente/profi/cadre_2019_2020.pdf"
+    },
+    {
+      "title": "Cadre didactice an școlar 2015-2016",
+      "link": "http://www.liceulnichitastanescu.ro/documente/profi/cadre_2015_2016.pdf"
+    }
+  ],
+  "studentsLinks": {
+    "courseSchedule": [
+      {
+        "title": "Program cursuri",
+        "link": "http://www.liceulnichitastanescu.ro/documente/orar/program%20cursuri%202021-2022.pdf"
+      }
+    ],
+    "breakSchedule": [
+      {
+        "title": "Pauze",
+        "link": "http://www.liceulnichitastanescu.ro/documente/orar/programarea%20pauzelor%20ltns.pdf"
+      }
+    ],
+    "timetable": [
+      {
+        "title": "Orar elevi 20-24.09.2021",
+        "link": "http://www.liceulnichitastanescu.ro/documente/orar/orar%20elevi%2020%20-%2024.09.2021.pdf"
+      }
+    ],
+    "covidPrevention": [
+      {
+        "title": "Ordin comun ME-5196_MS-1756",
+        "link": "http://www.liceulnichitastanescu.ro/documente/Diverse/ordin%20comun%20me-5196_ms-1756.pdf"
+      },
+      {
+        "title": "Comunicare părinți",
+        "link": "http://www.liceulnichitastanescu.ro/documente/Diverse/comunicare%20parinti%20.pdf"
+      }
+    ],
+    "studentsDistribution": [
+      {
+        "title": "Mesaj pentru părinți",
+        "link": "http://www.liceulnichitastanescu.ro/documente/MESAJ%20PENTRU%20PARINTI.pdf"
+      },
+      {
+        "title": "Programul zilei de 14 septembrie 2020",
+        "link": "http://www.liceulnichitastanescu.ro/documente/PROGRAMUL%20ZILEI%20DE%2014%20SEPTEMBRIE%202020.pdf"
+      }
+    ]
+  }
+}

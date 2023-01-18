@@ -1,0 +1,21 @@
+.app-contact {
+  .contact-details {
+    display: flex;
+    flex-flow: column;
+
+    &-item {
+      display: flex;
+
+      &-title {
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-right: 0.5vw;
+        margin-bottom: 1vw;
+      }
+    }
+  }
+  .map {
+    width: 100%;
+    height: 30vh;
+  }
+}

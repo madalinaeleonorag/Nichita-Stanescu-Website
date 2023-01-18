@@ -6,5 +6,24 @@
     "gallery": "galerie",
     "contact": "contact",
     "transparency": "transparenta institutionala"
+  },
+  "contact": {
+    "address": "adresa",
+    "phone": "telefon/Fax",
+    "internal-phone": "telefon intern",
+    "dentist": "dentist",
+    "email": "email",
+    "website": "website",
+    "transportation": "transport"
+  },
+  "employees": {
+    "personal-nominal-list": "Lista nominala personal"
+  },
+  "students": {
+    "course-schedule": "Program cursuri",
+    "break-schedule": "Programul pauzelor",
+    "timetable": "Orar",
+    "covid-prevention": "Măsuri de prevenire îmbolnăvire Sars-Cov2",
+    "students-distribution": "Repartizarea elevilor pe clase"
   }
 }

@@ -1,0 +1,13 @@
+.app-students {
+  .students-category {
+    &-title {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    &-links {
+      &-link {
+      }
+    }
+  }
+}

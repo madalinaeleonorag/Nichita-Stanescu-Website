@@ -1,1 +1,54 @@
-<p>contact works!</p>
+<div class="app-contact">
+  <div class="contact-details">
+    <div class="contact-details-item">
+      <div class="contact-details-item-title">
+        {{ "contact.address" | translate: language }}:
+      </div>
+      {{ DATA_VARIABLES.address }}
+    </div>
+    <div class="contact-details-item">
+      <div class="contact-details-item-title">
+        {{ "contact.phone" | translate: language }}:
+      </div>
+      {{ DATA_VARIABLES.phone }}
+    </div>
+    <div class="contact-details-item">
+      <div class="contact-details-item-title">
+        {{ "contact.internal-phone" | translate: language }}:
+      </div>
+      {{ DATA_VARIABLES.internalPhone }}
+    </div>
+    <div class="contact-details-item">
+      <div class="contact-details-item-title">
+        {{ "contact.dentist" | translate: language }}:
+      </div>
+      {{ DATA_VARIABLES.dentist }}
+    </div>
+    <div class="contact-details-item">
+      <div class="contact-details-item-title">
+        {{ "contact.email" | translate: language }}:
+      </div>
+      {{ DATA_VARIABLES.email }}
+    </div>
+    <div class="contact-details-item">
+      <div class="contact-details-item-title">
+        {{ "contact.website" | translate: language }}:
+      </div>
+      {{ DATA_VARIABLES.website }}
+    </div>
+    <div class="contact-details-item">
+      <div class="contact-details-item-title">
+        {{ "contact.transportation" | translate: language }}:
+      </div>
+      {{ DATA_VARIABLES.transportation }}
+    </div>
+  </div>
+  <iframe
+    class="map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1090.5423360289776!2d26.16938426697725!3d44.432891061030794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f94baa79d7fb%3A0xb03da369a3ca3268!2sNichita%20St%C4%83nescu%20Theoretical%20High%20School!5e0!3m2!1sen!2sro!4v1674071547294!5m2!1sen!2sro"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>

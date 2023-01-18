@@ -6,5 +6,24 @@
     "gallery": "gallery",
     "contact": "contact",
     "transparency": "institutional transparency"
+  },
+  "contact": {
+    "address": "address",
+    "phone": "phone/Fax",
+    "internal-phone": "internal phone",
+    "dentist": "dentist",
+    "email": "email",
+    "website": "website",
+    "transportation": "transportation"
+  },
+  "employees": {
+    "personal-nominal-list": "Personal nominal list"
+  },
+  "students": {
+    "course-schedule": "Course schedule",
+    "break-schedule": "Break schedule",
+    "timetable": "Timetable",
+    "covid-prevention": "Measures to prevent Sars-Cov2 disease",
+    "students-distribution": "Distribution of students by classes"
   }
 }
