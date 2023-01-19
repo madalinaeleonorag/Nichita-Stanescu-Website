@@ -6,7 +6,7 @@
     (click)="goTo('')"
   />
   <div class="items">
-    <div class="items-item languages">
+    <div class="items-item">
       <img
         src="./../../../assets/icons/flag-translation-english.jpg"
         alt="english flag translation"
@@ -18,6 +18,12 @@
         alt="romanian flag translation"
         (click)="selectLanguage('RO')"
         [ngClass]="{ isSelected: language === 'RO' }"
+      />
+
+      <img
+        class="items-item"
+        src="./../../../assets/icons/login.png"
+        alt="login admin website"
       />
     </div>
   </div>

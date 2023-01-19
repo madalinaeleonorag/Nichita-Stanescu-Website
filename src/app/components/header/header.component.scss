@@ -16,31 +16,22 @@
     align-items: center;
 
     &-item {
-      margin-left: 2vw;
-      text-transform: capitalize;
+      cursor: pointer;
+      display: flex;
+      margin-left: 0;
 
-      &:hover {
-        color: var(--primary);
-        cursor: pointer;
-      }
+      img {
+        height: 15px;
+        width: auto;
+        margin-left: 1vw;
+        filter: grayscale(1);
 
-      &.languages {
-        display: flex;
-        margin-left: 0;
+        &:hover {
+          filter: none;
+        }
 
-        img {
-          height: 15px;
-          width: auto;
-          margin-left: 1vw;
-          filter: grayscale(1);
-
-          &:hover {
-            filter: none;
-          }
-
-          &.isSelected {
-            filter: none;
-          }
+        &.isSelected {
+          filter: none;
         }
       }
     }
