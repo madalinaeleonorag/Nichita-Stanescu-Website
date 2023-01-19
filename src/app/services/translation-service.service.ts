@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
   providedIn: 'root',
 })
 export class TranslationServiceService {
-  private isLanguageSetSubject = new BehaviorSubject<any>('EN');
+  private isLanguageSetSubject = new BehaviorSubject<any>('RO');
   isLanguageSetObservable = this.isLanguageSetSubject.asObservable();
 
   constructor() {}

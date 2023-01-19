@@ -1,0 +1,61 @@
+<div class="app-menu">
+  <button mat-button (click)="goTo('')">
+    {{ "menu.home" | translate: language }}
+  </button>
+  <button mat-button [matMenuTriggerFor]="menu1">
+    {{ "menu.matriculations" | translate: language }}
+  </button>
+  <mat-menu #menu1="matMenu">
+    <button mat-menu-item (click)="goTo('primary-school')">
+      {{ "menu.primary-school" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('high-school')">
+      {{ "menu.high-school" | translate: language }}
+    </button>
+  </mat-menu>
+  <button mat-button (click)="goTo('notice-board')">
+    {{ "menu.notice" | translate: language }}
+  </button>
+  <button mat-button (click)="goTo('gallery')">
+    {{ "menu.gallery" | translate: language }}
+  </button>
+  <button mat-button [matMenuTriggerFor]="menu2">
+    {{ "menu.utils" | translate: language }}
+  </button>
+  <mat-menu #menu2="matMenu">
+    <button mat-menu-item (click)="goTo('external-transparency')">
+      {{ "menu.transparency" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('employees')">
+      {{ "menu.employees" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('students')">
+      {{ "menu.students" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('management-documents')">
+      {{ "menu.managerial-documents" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('activities')">
+      {{ "menu.activities" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('exams')">
+      {{ "menu.exams" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('scientific-sessions')">
+      {{ "menu.scientific-sessons" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('partnerships')">
+      {{ "menu.partnerships" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('about-poet')">
+      {{ "menu.about-poet" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('data-protection')">
+      {{ "menu.data-protection" | translate: language }}
+    </button>
+    <button mat-menu-item (click)="goTo('miscellaneous')">
+      {{ "menu.miscellaneous" | translate: language }}
+    </button>
+  </mat-menu>
+  <button mat-button (click)="goTo('contact')">Contact</button>
+</div>

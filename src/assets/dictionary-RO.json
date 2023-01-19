@@ -1,11 +1,24 @@
 {
   "menu": {
-    "employees": "angajati",
-    "students": "elevi",
+    "home": "acasa",
+    "matriculations": "inscrieri",
+    "primary-school": "Generala",
+    "high-school": "liceu",
     "notice": "avizier",
     "gallery": "galerie",
-    "contact": "contact",
-    "transparency": "transparenta institutionala"
+    "utils": "utile",
+    "transparency": "transparenta institutionala",
+    "employees": "angajati",
+    "students": "elevi",
+    "managerial-documents": "documente manageriale",
+    "activities": "Activitati si proiecte",
+    "exams": "Examene nationale",
+    "scientific-sessons": "Sesiuni de comunicari stiintifice",
+    "partnerships": "Parteneriate",
+    "about-poet": "Poetul Nichita Stanescu",
+    "data-protection": "Protectia datelor",
+    "miscellaneous": "Diverse",
+    "contact": "contact"
   },
   "contact": {
     "address": "adresa",
@@ -15,15 +28,5 @@
     "email": "email",
     "website": "website",
     "transportation": "transport"
-  },
-  "employees": {
-    "personal-nominal-list": "Lista nominala personal"
-  },
-  "students": {
-    "course-schedule": "Program cursuri",
-    "break-schedule": "Programul pauzelor",
-    "timetable": "Orar",
-    "covid-prevention": "Măsuri de prevenire îmbolnăvire Sars-Cov2",
-    "students-distribution": "Repartizarea elevilor pe clase"
   }
 }

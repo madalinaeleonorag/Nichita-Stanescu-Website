@@ -1,11 +1,24 @@
 {
   "menu": {
+    "home": "home",
+    "matriculations": "matriculations",
+    "primary-school": "primary school",
+    "high-school": "high school",
+    "notice": "notice",
+    "gallery": "gallery",
+    "utils": "utils",
+    "transparency": "institutional transparency",
     "employees": "employees",
     "students": "students",
-    "notice": "Notice board",
-    "gallery": "gallery",
-    "contact": "contact",
-    "transparency": "institutional transparency"
+    "managerial-documents": "managerial documents",
+    "activities": "Activities and projects",
+    "exams": "National exams",
+    "scientific-sessons": "Scientific communication sessions",
+    "partnerships": "Partneries",
+    "about-poet": "Poet Nichita Stanescu",
+    "data-protection": "Data protection",
+    "miscellaneous": "Miscellaneous",
+    "contact": "contact"
   },
   "contact": {
     "address": "address",
@@ -15,15 +28,5 @@
     "email": "email",
     "website": "website",
     "transportation": "transportation"
-  },
-  "employees": {
-    "personal-nominal-list": "Personal nominal list"
-  },
-  "students": {
-    "course-schedule": "Course schedule",
-    "break-schedule": "Break schedule",
-    "timetable": "Timetable",
-    "covid-prevention": "Measures to prevent Sars-Cov2 disease",
-    "students-distribution": "Distribution of students by classes"
   }
 }
