@@ -7,9 +7,13 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--background);
+  color: var(--black);
 }
 
 :root {
   --primary: #2f7fbc;
   --primary-light: #80aac2;
+  --background: #edf7f6;
+  --black: #051923;
 }

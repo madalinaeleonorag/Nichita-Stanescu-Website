@@ -8,6 +8,9 @@ import { CommonModule } from '@angular/common';
 // Angular Material
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+// Firebase
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
 // Pipes
 import { TranslatePipe } from './pipes/translate.pipe';
 // Components
@@ -30,6 +33,20 @@ import { AboutPoetComponent } from './pages/utils/about-poet/about-poet.componen
 import { DataProtectionComponent } from './pages/utils/data-protection/data-protection.component';
 import { MiscellaneousComponent } from './pages/utils/miscellaneous/miscellaneous.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
+import { ArticleComponent } from './components/article/article.component';
+import { ListArticleComponent } from './components/list-article/list-article.component';
+import { FormatDatePipe } from './pipes/format-date.pipe';
+
+// Initialize Firebase
+initializeApp({
+  apiKey: 'AIzaSyBgv6vgdenzASsiZbsB6vwr-mIEnQ9_2qQ',
+  authDomain: 'ltnb-website.firebaseapp.com',
+  projectId: 'ltnb-website',
+  storageBucket: 'ltnb-website.appspot.com',
+  messagingSenderId: '600916659075',
+  appId: '1:600916659075:web:3bf2570933a508052c84b6',
+  measurementId: 'G-C0Z7ZQ22RN',
+});
 
 @NgModule({
   declarations: [
@@ -54,6 +71,9 @@ import { CopyrightComponent } from './components/copyright/copyright.component';
     DataProtectionComponent,
     MiscellaneousComponent,
     CopyrightComponent,
+    ArticleComponent,
+    ListArticleComponent,
+    FormatDatePipe,
   ],
   imports: [
     BrowserModule,
