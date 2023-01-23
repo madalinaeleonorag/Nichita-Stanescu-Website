@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { get, getDatabase, ref } from 'firebase/database';
+import { get, getDatabase, push, ref } from 'firebase/database';
 
 @Injectable({
   providedIn: 'root',
@@ -18,5 +18,15 @@ export class FirebaseService {
    */
   public readDataCategory(category: string): Promise<any> {
     return get(ref(this.database, `/categories/${category}`));
+  }
+
+  public postArticle(
+    category: string,
+    data: { title: string | null; content: string | null }
+  ) {
+    push(ref(this.database, `/categories/${category}`), {
+      ...data,
+      postDate: new Date().toLocaleDateString(),
+    });
   }
 }

@@ -1,0 +1,33 @@
+<div class="app-add-post" *ngIf="isUserAccess">
+  <button mat-button (click)="openNewPost()">
+    {{ "posts.add-post" | translate: language }}
+  </button>
+  <div *ngIf="showEditor">
+    <form class="post-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Title</mat-label>
+        <input
+          matInput
+          placeholder="Title of article"
+          [formControl]="titleFormControl"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Content</mat-label>
+        <textarea
+          matInput
+          placeholder="Write your content"
+          [formControl]="contentFormControl"
+        ></textarea>
+      </mat-form-field>
+
+      <button mat-button (click)="addPost()">
+        {{ "posts.post" | translate: language }}
+      </button>
+      <button mat-button (click)="cancelPost()">
+        {{ "posts.cancel" | translate: language }}
+      </button>
+    </form>
+  </div>
+</div>

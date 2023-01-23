@@ -28,5 +28,10 @@
     "email": "email",
     "website": "website",
     "transportation": "transport"
+  },
+  "posts": {
+    "add-post": "Adauga postare",
+    "post": "Adauga",
+    "cancel": "Anuleaza"
   }
 }

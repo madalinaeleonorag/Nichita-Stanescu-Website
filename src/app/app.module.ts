@@ -5,12 +5,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Angular Material
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 // Firebase
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
 // Pipes
 import { TranslatePipe } from './pipes/translate.pipe';
 // Components
@@ -36,6 +37,7 @@ import { CopyrightComponent } from './components/copyright/copyright.component';
 import { ArticleComponent } from './components/article/article.component';
 import { ListArticleComponent } from './components/list-article/list-article.component';
 import { FormatDatePipe } from './pipes/format-date.pipe';
+import { AddPostComponent } from './components/add-post/add-post.component';
 
 // Initialize Firebase
 initializeApp({
@@ -74,6 +76,7 @@ initializeApp({
     ArticleComponent,
     ListArticleComponent,
     FormatDatePipe,
+    AddPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,6 +91,9 @@ initializeApp({
     CommonModule,
     MatMenuModule,
     MatButtonModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
