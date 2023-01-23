@@ -32,6 +32,7 @@
   "posts": {
     "add-post": "Adauga postare",
     "post": "Adauga",
-    "cancel": "Anuleaza"
+    "cancel": "Anuleaza",
+    "edit-post": "Salveaza modificarile"
   }
 }

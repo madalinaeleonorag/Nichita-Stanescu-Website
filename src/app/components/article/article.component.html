@@ -1,9 +1,19 @@
-<div class="app-article">
+<div class="app-article" *ngIf="!isEditEnabled">
   <div class="article-title">
     {{ article.title }}
+    <div class="article-title-actions" *ngIf="isUserAccess">
+      <button mat-button (click)="editPost()">Edit</button>
+      <button mat-button (click)="deletePost()">Delete</button>
+    </div>
   </div>
-  <div class="article-content" [innerHTML]="article.content"></div>
   <div class="article-date">
     {{ article.postDate | formatDate }}
   </div>
+  <div class="article-content" [innerHTML]="article.content"></div>
 </div>
+<app-add-post
+  *ngIf="isEditEnabled"
+  [editMode]="true"
+  [defaultValues]="article"
+  (disableEdit)="disableEditPost()"
+></app-add-post>

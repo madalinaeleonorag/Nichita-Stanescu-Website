@@ -1,5 +1,5 @@
 <div class="app-add-post" *ngIf="isUserAccess">
-  <button mat-button (click)="openNewPost()">
+  <button mat-button *ngIf="!showEditor" (click)="openNewPost()">
     {{ "posts.add-post" | translate: language }}
   </button>
   <div *ngIf="showEditor">
@@ -22,8 +22,11 @@
         ></textarea>
       </mat-form-field>
 
-      <button mat-button (click)="addPost()">
+      <button mat-button *ngIf="!editMode" (click)="addPost()">
         {{ "posts.post" | translate: language }}
+      </button>
+      <button mat-button *ngIf="editMode" (click)="editPost()">
+        {{ "posts.edit-post" | translate: language }}
       </button>
       <button mat-button (click)="cancelPost()">
         {{ "posts.cancel" | translate: language }}

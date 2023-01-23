@@ -18,12 +18,18 @@ export class ListArticleComponent {
 
   ngOnInit() {
     this.firebaseService.readDataCategory(this.page).then((result: any) => {
-      const objectKeys = Object.keys(result.val());
-      const transformArray: Array<any> = [];
-      objectKeys.forEach((key: any) =>
-        transformArray.push({ key, ...result.val()[key] })
-      );
-      this.listOfArticles = this.commonService.sortByDate(transformArray);
+      if (result && result.val()) {
+        const objectKeys = Object.keys(result.val());
+        const transformArray: Array<any> = [];
+        objectKeys.forEach((key: any) =>
+          transformArray.push({
+            key,
+            ...result.val()[key],
+            categoryKey: this.page,
+          })
+        );
+        this.listOfArticles = this.commonService.sortByDate(transformArray);
+      }
     });
   }
 }

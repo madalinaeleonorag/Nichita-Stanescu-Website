@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { FirebaseService } from 'src/app/services/firebase.service';
@@ -11,6 +11,10 @@ import { TranslationServiceService } from 'src/app/services/translation-service.
 })
 export class AddPostComponent {
   @Input() page: string;
+  @Input() editMode: boolean;
+  @Input() defaultValues: any;
+
+  @Output() disableEdit: EventEmitter<any> = new EventEmitter<any>;
 
   public isUserAccess: boolean = true;
   public showEditor: boolean = false;
@@ -23,13 +27,22 @@ export class AddPostComponent {
   constructor(
     private translationService: TranslationServiceService,
     private firebaseService: FirebaseService
-  ) {}
+  ) {
+  }
 
   ngOnInit() {
     this.isLanguageSetSubscription =
       this.translationService.isLanguageSetObservable.subscribe((result) => {
         this.language = result;
       });
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if(changes['editMode']) {
+      this.showEditor = true;
+      this.titleFormControl.setValue(this.defaultValues.title);
+      this.contentFormControl.setValue(this.defaultValues.content);
+    }
   }
 
   public openNewPost() {
@@ -46,6 +59,7 @@ export class AddPostComponent {
   public cancelPost() {
     this.clearForm();
     this.showEditor = false;
+    this.editMode && this.disableEdit.emit(false);
   }
 
   public addPost() {
@@ -54,5 +68,17 @@ export class AddPostComponent {
       content: this.contentFormControl.value,
     });
     this.clearForm();
+    this.showEditor = false;
+  }
+
+  public editPost() {
+    this.firebaseService.updateArticle(this.defaultValues.categoryKey, {
+      title: this.titleFormControl.value,
+      content: this.contentFormControl.value,
+      key: this.defaultValues.key
+    });
+    this.clearForm();
+    this.showEditor = false;
+    this.editMode && this.disableEdit.emit(false);
   }
 }

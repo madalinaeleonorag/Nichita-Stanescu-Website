@@ -1,4 +1,7 @@
 .app-article {
+  background-color: var(--white);
+  margin-bottom: 10px;
+
   .article {
     &-title {
       color: var(--primary);
@@ -6,6 +9,15 @@
       font-size: x-large;
       background: var(--primary-light);
       padding: 10px;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &-actions {
+        display: flex;
+        flex-flow: row;
+      }
     }
 
     &-content {

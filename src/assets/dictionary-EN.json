@@ -32,6 +32,7 @@
   "posts": {
     "add-post": "Add a new post",
     "post": "Add",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "edit-post": "Save updates"
   }
 }
