@@ -26,7 +26,7 @@ export class FirebaseService {
   ) {
     push(ref(this.database, `/categories/${category}`), {
       ...data,
-      postDate: new Date().toLocaleDateString(),
+      postDate: new Date().toString(),
     });
   }
 
@@ -38,7 +38,7 @@ export class FirebaseService {
     updates[`/categories/${category}/${data.key}`] = {
       title: data.title,
       content: data.content,
-      postDate: new Date().toLocaleDateString(),
+      postDate: new Date().toString(),
     };
     update(ref(this.database), updates);
   }
