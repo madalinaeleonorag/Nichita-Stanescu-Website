@@ -1,0 +1,13 @@
+.app-gallery {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+
+  .image {
+    height: 20vw;
+    flex: 0 1 49%;
+    background-size: cover;
+    background-position: center;
+    margin: 2px;
+  }
+}

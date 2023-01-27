@@ -1,1 +1,7 @@
-<div class="app-gallery"></div>
+<div class="app-gallery">
+  <div
+    class="image"
+    *ngFor="let imageUrl of PHOTOS_LINKS"
+    [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')' }"
+  ></div>
+</div>

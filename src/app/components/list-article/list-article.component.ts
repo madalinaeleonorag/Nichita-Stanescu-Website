@@ -26,6 +26,7 @@ export class ListArticleComponent {
             key,
             ...result.val()[key],
             categoryKey: this.page,
+            title: result.val()[key].title.toLowerCase(),
           })
         );
         this.listOfArticles = this.commonService.sortByDate(transformArray);
