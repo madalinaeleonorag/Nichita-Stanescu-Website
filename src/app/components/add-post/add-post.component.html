@@ -1,10 +1,10 @@
 <div class="app-add-post" *ngIf="isUserAccess">
-  <button mat-button *ngIf="!showEditor" (click)="openNewPost()">
+  <button *ngIf="!showEditor" (click)="openNewPost()" class="primary-button">
     {{ "posts.add-post" | translate: language }}
   </button>
   <div *ngIf="showEditor">
     <form class="post-form">
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="article-title">
         <mat-label>Title</mat-label>
         <input
           matInput
@@ -12,8 +12,10 @@
           [formControl]="titleFormControl"
         />
       </mat-form-field>
-
-      <mat-form-field class="example-full-width">
+      <div class="article-date">
+        {{ todayDateString | formatDate }}
+      </div>
+      <mat-form-field class="article-content">
         <mat-label>Content</mat-label>
         <textarea
           matInput
@@ -22,15 +24,17 @@
         ></textarea>
       </mat-form-field>
 
-      <button mat-button *ngIf="!editMode" (click)="addPost()">
-        {{ "posts.post" | translate: language }}
-      </button>
-      <button mat-button *ngIf="editMode" (click)="editPost()">
-        {{ "posts.edit-post" | translate: language }}
-      </button>
-      <button mat-button (click)="cancelPost()">
-        {{ "posts.cancel" | translate: language }}
-      </button>
+      <div class="article-actions">
+        <button *ngIf="!editMode" (click)="addPost()" class="primary-button">
+          {{ "posts.post" | translate: language }}
+        </button>
+        <button *ngIf="editMode" (click)="editPost()" class="primary-button">
+          {{ "posts.edit-post" | translate: language }}
+        </button>
+        <button class="secondary-button" (click)="cancelPost()">
+          {{ "posts.cancel" | translate: language }}
+        </button>
+      </div>
     </form>
   </div>
 </div>

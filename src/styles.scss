@@ -16,5 +16,57 @@ body {
   --primary-light: #80aac2;
   --background: #edf7f6;
   --black: #051923;
-  --white: white;
+  --white: #ffffff;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+
+  &::after {
+    content: " 🡕";
+  }
+
+  &:visited {
+    color: var(--primary-light);
+  }
+
+  &:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+  }
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+ul,
+li {
+  &::marker {
+    color: var(--primary);
+  }
+}
+
+.primary-button {
+  border: 1px solid var(--primary-light);
+  color: var(--primary);
+  background: var(--white);
+  width: fit-content;
+  padding: 1vw 2vw;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: var(--background);
+  }
+}
+
+.secondary-button {
+  border: 1px solid var(--background);
+  color: var(--primary);
+  background: var(--background);
+  width: fit-content;
+  padding: 1vw 2vw;
 }

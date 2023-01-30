@@ -20,6 +20,7 @@ export class AddPostComponent {
   public showEditor: boolean = false;
   public titleFormControl = new FormControl('', [Validators.required]);
   public contentFormControl = new FormControl('', [Validators.required]);
+  public todayDateString: string = new Date().toString();
 
   isLanguageSetSubscription: Subscription;
   language: string;

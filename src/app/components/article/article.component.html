@@ -2,8 +2,12 @@
   <div class="article-title">
     {{ article.title }}
     <div class="article-title-actions" *ngIf="isUserAccess">
-      <button mat-button (click)="editPost()">Edit</button>
-      <button mat-button (click)="deletePost()">Delete</button>
+      <button mat-button (click)="editPost()">
+        <img src="../../../assets/icons/edit.png" alt="edit logo" />
+      </button>
+      <button mat-button (click)="deletePost()">
+        <img src="../../../assets/icons/delete.png" alt="delete logo" />
+      </button>
     </div>
   </div>
   <div class="article-date">
