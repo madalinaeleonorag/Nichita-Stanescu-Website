@@ -1,23 +1,48 @@
 import { Injectable } from '@angular/core';
-import { get, getDatabase, push, ref, remove, update } from 'firebase/database';
+import {
+  get,
+  getDatabase,
+  onValue,
+  push,
+  ref,
+  remove,
+  update,
+} from 'firebase/database';
+import { BehaviorSubject } from 'rxjs';
+import { CommonService } from './common.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FirebaseService {
   private database: any;
+  private articlesListSubject = new BehaviorSubject<any>([]);
+  articlesListObservable = this.articlesListSubject.asObservable();
 
-  constructor() {
+  constructor(private commonService: CommonService) {
     this.database = getDatabase();
   }
 
   /**
    * Reading the registered data from a specific path in database
    * @param category is a string with the name of the category
-   * @returns a promise with the values from the specified path
    */
-  public readDataCategory(category: string): Promise<any> {
-    return get(ref(this.database, `/categories/${category}`));
+  public readDataCategory(category: string) {
+    onValue(ref(this.database, `/categories/${category}`), (snapshot) => {
+      const data = snapshot.val();
+      const objectKeys = Object.keys(data);
+      const transformArray: Array<any> = [];
+      objectKeys.forEach((key: any) =>
+        transformArray.push({
+          key,
+          ...data[key],
+          categoryKey: category,
+        })
+      );
+      this.articlesListSubject.next(
+        this.commonService.sortByDate(transformArray)
+      );
+    });
   }
 
   public postArticle(

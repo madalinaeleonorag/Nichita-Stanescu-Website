@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CommonService } from 'src/app/services/common.service';
+import { Subscription } from 'rxjs';
 import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
@@ -9,28 +9,20 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class ListArticleComponent {
   @Input() page: string;
-  public listOfArticles: Array<any>;
+  private articlesListSubscription: Subscription;
+  public articlesList: Array<any> = [];
 
-  constructor(
-    private firebaseService: FirebaseService,
-    private commonService: CommonService
-  ) {}
+  constructor(private firebaseService: FirebaseService) {}
 
   ngOnInit() {
-    this.firebaseService.readDataCategory(this.page).then((result: any) => {
-      if (result && result.val()) {
-        const objectKeys = Object.keys(result.val());
-        const transformArray: Array<any> = [];
-        objectKeys.forEach((key: any) =>
-          transformArray.push({
-            key,
-            ...result.val()[key],
-            categoryKey: this.page,
-            title: result.val()[key].title.toLowerCase(),
-          })
-        );
-        this.listOfArticles = this.commonService.sortByDate(transformArray);
-      }
-    });
+    this.firebaseService.readDataCategory(this.page);
+    this.articlesListSubscription =
+      this.firebaseService.articlesListObservable.subscribe((result) => {
+        this.articlesList = result;
+      });
+  }
+
+  ngOnDestroy() {
+    this.articlesListSubscription.unsubscribe();
   }
 }
