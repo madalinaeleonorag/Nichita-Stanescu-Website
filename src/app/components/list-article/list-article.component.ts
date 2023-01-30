@@ -9,20 +9,14 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class ListArticleComponent {
   @Input() page: string;
-  private articlesListSubscription: Subscription;
   public articlesList: Array<any> = [];
 
   constructor(private firebaseService: FirebaseService) {}
 
   ngOnInit() {
     this.firebaseService.readDataCategory(this.page);
-    this.articlesListSubscription =
-      this.firebaseService.articlesListObservable.subscribe((result) => {
-        this.articlesList = result;
-      });
-  }
-
-  ngOnDestroy() {
-    this.articlesListSubscription.unsubscribe();
+    this.firebaseService.articlesListObservable.subscribe((result) => {
+      this.articlesList = result;
+    });
   }
 }

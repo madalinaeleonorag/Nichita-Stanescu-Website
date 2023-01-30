@@ -27,7 +27,6 @@ export class AppComponent {
       });
     this.routerSubscription = this.router.events.subscribe((value) => {
       this.actualPage = this.router.url.toString();
-      console.log(this.actualPage);
     });
   }
 
