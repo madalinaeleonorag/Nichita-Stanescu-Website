@@ -1,7 +1,9 @@
 <div class="app-add-post" *ngIf="isUserAccess">
-  <button *ngIf="!showEditor" (click)="openNewPost()" class="primary-button">
-    {{ "posts.add-post" | translate: language }}
-  </button>
+  <div class="add-button">
+    <button *ngIf="!showEditor" (click)="openNewPost()" class="primary-button">
+      {{ "posts.add-post" | translate: language }}
+    </button>
+  </div>
   <div *ngIf="showEditor">
     <form class="post-form">
       <mat-form-field class="article-title">

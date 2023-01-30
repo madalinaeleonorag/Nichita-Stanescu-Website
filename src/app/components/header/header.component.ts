@@ -9,8 +9,8 @@ import { TranslationServiceService } from 'src/app/services/translation-service.
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  isLanguageSetSubscription: Subscription;
-  language: string;
+  private isLanguageSetSubscription: Subscription;
+  public language: string;
 
   constructor(
     private router: Router,

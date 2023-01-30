@@ -9,8 +9,8 @@ import { TranslationServiceService } from 'src/app/services/translation-service.
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  isLanguageSetSubscription: Subscription;
-  language: string;
+  private isLanguageSetSubscription: Subscription;
+  public language: string;
 
   constructor(
     private router: Router,
@@ -32,5 +32,9 @@ export class MenuComponent {
 
   public selectLanguage(language: string) {
     this.translationService.setLanguage(language);
+  }
+
+  ngOnDestroy() {
+    this.isLanguageSetSubscription.unsubscribe();
   }
 }

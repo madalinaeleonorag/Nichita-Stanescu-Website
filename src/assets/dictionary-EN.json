@@ -34,5 +34,22 @@
     "post": "Add",
     "cancel": "Cancel",
     "edit-post": "Save updates"
+  },
+  "page": {
+    "/primary-school": "Primary school",
+    "/high-school": "High school",
+    "/notice-board": "Notice board",
+    "/gallery": "Gallery",
+    "/employees": "Employees",
+    "/students": "Students",
+    "/management-documents": "Managerial documents",
+    "/activities": "Activities",
+    "/exams": "Exams",
+    "/scientific-sessions": "Sesiuni de comunicari stiintifice",
+    "/partnerships": "Partnerships",
+    "/about-poet": "About Nichita Stanescu",
+    "/data-protection": "Protection of personal data",
+    "/miscellaneous": "Miscellaneous",
+    "/contact": "Contact data"
   }
 }

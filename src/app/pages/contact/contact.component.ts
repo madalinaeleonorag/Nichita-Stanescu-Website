@@ -9,8 +9,8 @@ import * as data from '../../../assets/data.json';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-  isLanguageSetSubscription: Subscription;
-  language: string;
+  private isLanguageSetSubscription: Subscription;
+  public language: string;
   DATA_VARIABLES = JSON.parse(JSON.stringify(data));
 
   constructor(private translationService: TranslationServiceService) {}

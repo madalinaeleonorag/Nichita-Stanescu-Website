@@ -1,4 +1,9 @@
 .app-add-post {
+  .add-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .post-form {
     background-color: var(--white);
     border-radius: 3px;

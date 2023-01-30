@@ -1,6 +1,7 @@
 <app-header></app-header>
 <app-menu></app-menu>
 <div class="content-wrapper">
+  <div class="page-title">{{ "page." + actualPage | translate: language }}</div>
   <router-outlet></router-outlet>
 </div>
 <app-copyright></app-copyright>

@@ -22,8 +22,8 @@ export class AddPostComponent {
   public contentFormControl = new FormControl('', [Validators.required]);
   public todayDateString: string = new Date().toString();
 
-  isLanguageSetSubscription: Subscription;
-  language: string;
+  private isLanguageSetSubscription: Subscription;
+  public language: string;
 
   constructor(
     private translationService: TranslationServiceService,

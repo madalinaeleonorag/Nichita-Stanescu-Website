@@ -1,4 +1,18 @@
 .app-menu {
   display: flex;
   justify-content: center;
+  background: var(--primary-light);
+  margin-bottom: 10px;
+
+  button {
+    text-transform: uppercase;
+    border: 1px solid var(--primary-light);
+    border-radius: 0px;
+    color: var(--primary-light);
+    background: var(--background);
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
 }

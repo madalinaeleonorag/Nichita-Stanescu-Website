@@ -34,5 +34,22 @@
     "post": "Adauga",
     "cancel": "Anuleaza",
     "edit-post": "Salveaza modificarile"
+  },
+  "page": {
+    "/primary-school": "Scoala generala",
+    "/high-school": "Liceu",
+    "/notice-board": "Avizier",
+    "/gallery": "Galerie foto",
+    "/employees": "Anunturi angajati",
+    "/students": "Anunturi elevi",
+    "/management-documents": "Documente manageriale",
+    "/activities": "Activitati",
+    "/exams": "Examene",
+    "/scientific-sessions": "Sesiuni de comunicari stiintifice",
+    "/partnerships": "Parteneriate",
+    "/about-poet": "Despre Nichita Stanescu",
+    "/data-protection": "Protectia datelor cu caracter personal",
+    "/miscellaneous": "Diverse",
+    "/contact": "Date de contact"
   }
 }

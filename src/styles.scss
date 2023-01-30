@@ -17,6 +17,7 @@ body {
   --background: #edf7f6;
   --black: #051923;
   --white: #ffffff;
+  --primary-transparent: #2f7fbc2e;
 }
 
 a {
@@ -69,4 +70,11 @@ li {
   background: var(--background);
   width: fit-content;
   padding: 1vw 2vw;
+}
+
+.page-title {
+  font-weight: bold;
+  color: var(--primary-transparent);
+  font-size: 32px;
+  padding: 10px 0;
 }
