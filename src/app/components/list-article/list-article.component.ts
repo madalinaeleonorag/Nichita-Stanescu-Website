@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({

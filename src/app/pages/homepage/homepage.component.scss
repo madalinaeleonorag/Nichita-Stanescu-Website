@@ -1,0 +1,36 @@
+.app-homepage {
+  .reviews {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+
+    .review {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      flex: 0 1 20%;
+      padding: 20px 10px;
+      margin: 5px;
+      background: white;
+
+      img {
+        height: 70px;
+      }
+
+      .stars {
+        display: flex;
+        flex-flow: row;
+
+        .star {
+          padding: 0 1px;
+          color: var(--primary-light);
+        }
+      }
+
+      .comment {
+        text-align: center;
+      }
+    }
+  }
+}

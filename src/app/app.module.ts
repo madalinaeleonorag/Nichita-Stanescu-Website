@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 // Angular Material
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
@@ -38,6 +39,7 @@ import { ArticleComponent } from './components/article/article.component';
 import { ListArticleComponent } from './components/list-article/list-article.component';
 import { FormatDatePipe } from './pipes/format-date.pipe';
 import { AddPostComponent } from './components/add-post/add-post.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 // Initialize Firebase
 initializeApp({
@@ -77,6 +79,7 @@ initializeApp({
     ListArticleComponent,
     FormatDatePipe,
     AddPostComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
@@ -94,6 +97,7 @@ initializeApp({
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,1 +1,13 @@
-<div class="app-homepage"></div>
+<div class="app-homepage">
+  <div class="page-title">Reviews</div>
+  <div class="reviews">
+    <div class="review" *ngFor="let review of reviews">
+      <img src="../../../assets/icons/user.png" alt="user avatar" />
+      <div class="date">{{ review.date }}</div>
+      <div class="stars">
+        <div class="star" *ngFor="let star of review.stars">★</div>
+      </div>
+      <div class="comment">{{ review.comment }}</div>
+    </div>
+  </div>
+</div>

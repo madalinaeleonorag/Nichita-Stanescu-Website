@@ -1,11 +1,12 @@
 <div class="app-header">
   <img
-    src="./../../../assets/logo.png"
+    src="./../../../assets/logo_ltns.png"
     alt="logo liceul teoretic nichita stanescu"
     class="logo"
     (click)="goTo('')"
   />
   <div class="items">
+    <app-menu></app-menu>
     <div class="items-item">
       <img
         src="./../../../assets/icons/flag-translation-english.jpg"
@@ -20,11 +21,11 @@
         [ngClass]="{ isSelected: language === 'RO' }"
       />
 
-      <img
+      <!-- <img
         class="items-item"
         src="./../../../assets/icons/login.png"
         alt="login admin website"
-      />
+      /> -->
     </div>
   </div>
 </div>

@@ -32,5 +32,6 @@ export class AppComponent {
 
   ngOnDestroy() {
     this.isLanguageSetSubscription.unsubscribe();
+    this.routerSubscription.unsubscribe();
   }
 }
