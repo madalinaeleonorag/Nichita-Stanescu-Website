@@ -1,6 +1,32 @@
 .app-banner {
-  height: 70vh;
-  background-size: cover;
-  background-position: center;
-  background-image: url(./../../../assets/unseen-studio-s9CC2SKySJM-unsplash.jpg);
+  height: 50vh;
+  display: flex;
+
+  img {
+    height: auto;
+    width: -webkit-fill-available;
+    filter: opacity(0.7);
+  }
+
+  .text {
+    position: absolute;
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: center;
+    height: 50vh;
+    align-items: center;
+    color: var(--primary-light);
+    font-weight: bold;
+    font-size: 60px;
+    flex-flow: column;
+
+    &-subtitle {
+      color: var(--primary);
+    }
+
+    p {
+      margin: 9px;
+      text-shadow: -1px 1px 1px var(--background);
+    }
+  }
 }

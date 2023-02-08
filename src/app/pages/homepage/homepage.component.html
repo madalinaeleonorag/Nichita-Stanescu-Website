@@ -1,4 +1,38 @@
 <div class="app-homepage">
+  <app-banner></app-banner>
+  <div class="page-title">Matriculations</div>
+  <div class="matriculations">
+    <div class="matriculations-item">
+      <div
+        class="matriculations-item-image"
+        [ngStyle]="{
+          'background-image':
+            'url(../../../assets/images/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg)'
+        }"
+      ></div>
+      <div class="matriculations-item-title">High school</div>
+      <div class="matriculations-item-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+      <button class="primary-button">See more</button>
+    </div>
+    <div class="matriculations-item">
+      <div
+        class="matriculations-item-image"
+        [ngStyle]="{
+          'background-image':
+            'url(../../../assets/images/note-thanun-CYlPykF-qAM-unsplash.jpg)'
+        }"
+      ></div>
+      <div class="matriculations-item-title">Primary school</div>
+      <div class="matriculations-item-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+      <button class="primary-button">See more</button>
+    </div>
+  </div>
   <div class="page-title">Reviews</div>
   <div class="reviews">
     <div class="review" *ngFor="let review of reviews">
